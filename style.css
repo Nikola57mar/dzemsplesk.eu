@@ -1149,23 +1149,11 @@ textarea {
 }
 
 .footer-bottom {
+    display: block;
     padding-top: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 8px 20px;
     color: #7f8b9d;
     font-size: 10px;
     line-height: 1.7;
-}
-
-.footer-bottom>span:first-child {
-    flex: 1;
-}
-
-.footer-bottom>span:nth-child(2) {
-    text-align: right;
 }
 
 .footer-bottom a {
