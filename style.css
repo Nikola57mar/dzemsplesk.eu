@@ -1154,11 +1154,13 @@ textarea {
 .logo {
     display: inline-flex;
     align-items: center;
+    min-width: 0;
+    max-width: 100%;
 }
 
 .logo img {
     display: block;
-    width: 180px;
+    width: clamp(140px, 18vw, 240px);
     max-width: 100%;
     height: auto;
     object-fit: contain;
