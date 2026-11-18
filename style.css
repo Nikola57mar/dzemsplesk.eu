@@ -306,66 +306,6 @@ textarea {
     background-image: linear-gradient(135deg, #f7f9fc 0%, #e9f0fb 100%)
 }
 
-.art-label {
-    position: absolute;
-    top: 24px;
-    left: 26px;
-    right: 26px;
-    display: flex;
-    justify-content: space-between;
-    font-size: 9px;
-    font-weight: 800;
-    letter-spacing: 1.8px;
-    z-index: 3
-}
-
-.art-label span {
-    color: #7b8798
-}
-
-.paint-panel {
-    position: absolute;
-    border-radius: 4px;
-    transform: rotate(-9deg)
-}
-
-.panel-blue {
-    width: 180px;
-    height: 250px;
-    right: 60px;
-    top: 78px;
-    background: var(--blue);
-    box-shadow: 0 18px 40px #1769e02c
-}
-
-.panel-pale {
-    width: 115px;
-    height: 195px;
-    right: 210px;
-    top: 135px;
-    background: #d2e2fb;
-    transform: rotate(10deg)
-}
-
-.panel-dark {
-    width: 78px;
-    height: 150px;
-    right: 35px;
-    top: 175px;
-    background: #152b4d;
-    transform: rotate(12deg)
-}
-
-.roller {
-    position: absolute;
-    width: 96%;
-    max-width: 430px;
-    left: 1%;
-    top: 16%;
-    filter: drop-shadow(0 20px 15px #10213c1c);
-    z-index: 2
-}
-
 .art-caption {
     position: absolute;
     left: 26px;
@@ -385,16 +325,6 @@ textarea {
     background: var(--blue)
 }
 
-.art-number {
-    position: absolute;
-    right: 24px;
-    bottom: 20px;
-    font: 800 42px 'Manrope', sans-serif;
-    color: #fff;
-    text-shadow: 0 2px 10px #10213c25
-}
-
-.art-number span,
 .mini-mark span {
     color: var(--blue)
 }
@@ -926,13 +856,6 @@ textarea {
         padding: 25px
     }
 
-    .panel-blue {
-        right: 40px
-    }
-
-    .panel-pale {
-        right: 160px
-    }
 }
 
 @media(max-width:700px) {
@@ -1194,3 +1117,77 @@ textarea {
         text-align: left;
     }
 }
+
+/* Hero: stena pred / po */
+.wall {
+    position: absolute;
+    inset: 0
+}
+
+.wall-before {
+    background-color: #e9edf3;
+    background-image: radial-gradient(rgba(16, 24, 40, .06) 1px, transparent 1.4px);
+    background-size: 7px 7px
+}
+
+.wall-after {
+    background: linear-gradient(135deg, #2a7cf0 0%, var(--blue) 45%, var(--blue-dark) 100%);
+    clip-path: polygon(50% 0, 100% 0, 100% 100%, 43% 100%)
+}
+
+.wall-after::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(90deg, rgba(255, 255, 255, .06) 0 2px, transparent 2px 46px)
+}
+
+.wall-tag {
+    position: absolute;
+    top: 24px;
+    left: 26px;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+    color: #7b8798
+}
+
+.wall-after .wall-tag {
+    left: auto;
+    right: 26px;
+    color: #fff
+}
+
+.cracks {
+    position: absolute;
+    left: 14%;
+    top: 14%;
+    height: 66%;
+    stroke: #b4bdca;
+    stroke-width: 1.6;
+    stroke-linecap: round;
+    stroke-linejoin: round
+}
+
+.swatches {
+    position: absolute;
+    right: 26px;
+    bottom: 26px;
+    display: flex;
+    gap: 8px;
+    z-index: 3
+}
+
+.swatches i {
+    width: 26px;
+    height: 26px;
+    border-radius: 8px;
+    border: 2px solid #fff;
+    box-shadow: 0 4px 10px #10213c26
+}
+
+.swatches i:nth-child(1) { background: #ffffff }
+.swatches i:nth-child(2) { background: #d2e2fb }
+.swatches i:nth-child(3) { background: #5b9bf5 }
+.swatches i:nth-child(4) { background: var(--blue) }
+.swatches i:nth-child(5) { background: #101828 }
